@@ -32,7 +32,7 @@ export const DataCategoryFilters = () => {
         sx={{ width: "95%" }}
       >
         {dataCategories.map((dataCategory) => {
-          const displayName = dataCategory.split("identifiable.").pop();
+          const displayName = dataCategory.split("identifiable.").pop(); // In the mock data provided, this seems to be common to all categories and thus is a useful split point for generating terse but usefully differentiated display labels. Would have to re-evaluate for scaled-up production data on how to achieve a similar outcome.
           return (
             <ToggleButton value={dataCategory}>{displayName}</ToggleButton>
           );
