@@ -49,6 +49,7 @@ I then spent additional time exploring alternative approaches, refining the UI, 
   - Automated testing, including unit tests for modular logic such as the contents of the utils file and UI integration tests using Cypress or Playwright to test UI behaviour
   - Accessibility, particularly appropriate ARIA labels
   - Enhancing the responsiveness of the design to make it suitable for viewing on mobile devices
+  - Various UI tweaks and polish (e.g. smoother scrolling behaviour in the content pane, only expand one card when header clicked instead of every card in the same row)
 
   ## Feedback
 
