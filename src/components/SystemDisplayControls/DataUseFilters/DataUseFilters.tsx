@@ -11,7 +11,7 @@ export const DataUseFilters = () => {
   const { activeDataUses, setActiveDataUses, systems } = useDashboardStore();
 
   const handleChange = (
-    event: React.MouseEvent<HTMLElement>,
+    _event: React.MouseEvent<HTMLElement>,
     newDataUses: string[]
   ) => {
     setActiveDataUses(newDataUses);
