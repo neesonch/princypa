@@ -17,12 +17,18 @@ export function groupSystemsByType(systems: System[]): GroupedSystems[] {
   }));
 }
 
-export const groupSystemsByDataUse = (systems: System[]): GroupedSystems[] => {
+export const groupSystemsByDataUse = (
+  systems: System[],
+  activeDataUses: Set<string>
+): GroupedSystems[] => {
   const map = new Map<string, System[]>();
 
   systems.forEach((system) => {
     system.privacy_declarations.forEach((declaration) => {
       const { data_use } = declaration;
+      if (!activeDataUses.has(data_use)) {
+        return;
+      }
       if (!map.has(data_use)) map.set(data_use, []);
       map.get(data_use)!.push(system);
     });

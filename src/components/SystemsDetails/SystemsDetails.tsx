@@ -21,7 +21,7 @@ export const SystemsDetails = () => {
   const groupedSystems =
     viewMode === "system-type"
       ? groupSystemsByType(filteredSystems)
-      : groupSystemsByDataUse(filteredSystems);
+      : groupSystemsByDataUse(filteredSystems, activeDataUses);
 
   return (
     <Box
